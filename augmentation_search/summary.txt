@@ -1,0 +1,15 @@
+Augmentation search summary
+Target mean RGB: [136.6 116.7 128.8]
+Source mean RGB: [124.9 105.1 115.8]
+
+augmentation           target_coverage  colour_spread
+combined                         100%           33.2
+brightness_contrast              100%           32.2
+white_balance                    100%           21.9
+hue                              100%           18.1
+blur                             100%           17.6
+none                             100%           17.6
+saturation                        92%           17.7
+noise                             92%           17.6
+
+Recommended: combined

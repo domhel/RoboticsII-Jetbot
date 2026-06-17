@@ -1,0 +1,38 @@
+# Config for bot_driving.py
+
+model:
+  path: 'models/mobilenetv3_epoch014_loss0.08324.onnx'
+  preprocessing: 'color'   # 'color' or 'grayscale'
+  swap_rb: false           # keep false (they expect BGR)
+  crop_top: 0.0            # for region of interest
+
+robot:
+  max_speed: 0.4
+  max_steering: 0.4
+  differential:
+    left: 1.0
+    right: 1.0
+
+driving:
+  # Scale the raw model outputs before they become motor commands.
+  forward_gain: 0.3
+  steering_gain: 0.6
+
+  # Overwrite model's forward output
+  #fixed_forward: 0.3
+  fixed_forward: ~
+
+  # Limits applied after gains
+  max_forward: 0.4
+  max_left: 0.6
+
+  # Exponential moving average on the commands, we get a bit delay but smoother controls
+  #smoothing: 0.5
+  smoothing: 0
+
+  # Limit how often motor commands are sent
+  #control_hz: 10
+  control_hz: 0
+
+  # <1 => bot slows down in sharp turns
+  turn_slowdown: 1.0
