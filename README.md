@@ -1,6 +1,6 @@
 # JetBot End-to-End Road Following
 
-Group name: Tweakers, Submission: 17.06.2026
+Group name: Tweakers, Submission: 17.06.2026, GitHub repo: https://github.com/domhel/RoboticsII-Jetbot
 
 The goal is to make a JetBot drive itself around a track using only its camera. A single neural network maps each camera frame directly to a driving command (forward/backward gain and left/right steering) with no hand-crafted lane detection or planning. The quality quality of the driving is therefore determined by the quality of the neural network as well as the post-processing of its outputs.
 
